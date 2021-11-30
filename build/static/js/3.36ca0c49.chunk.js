@@ -1,0 +1,2 @@
+(this["webpackJsonppwa-demo"]=this["webpackJsonppwa-demo"]||[]).push([[3],{17:function(e,s,t){"use strict";t.r(s);t(0);var i=t(2);s.default=function(){return Object(i.jsx)("h1",{children:"This is your About page"})}}}]);
+//# sourceMappingURL=3.36ca0c49.chunk.js.map
