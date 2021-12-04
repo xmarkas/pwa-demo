@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Snackbar, Alert as MuiAlert } from "@mui/material";
-import Logo from "../images/cafe_logo2.png";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return (
