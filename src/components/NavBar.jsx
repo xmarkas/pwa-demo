@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../images/cafe_logo2.png";
+import Logo from "../images/cafe_logo512.png";
 import Back2 from "../images/shots.jpg";
 import Back1 from "../images/gl-hp-pic.jpg";
 import { Box } from "@mui/material";
