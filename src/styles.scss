@@ -1,0 +1,276 @@
+$base-background: #313539;
+$card-back: #24292d;
+$card-back-alt: #2b3136;
+$color-yellow: #ae895d;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: $base-background;
+}
+
+.Nunito {
+  font-family: "Nunito";
+  font-weight: normal;
+}
+
+.section-break {
+  border: 5px rgb(204, 204, 204);
+  border-bottom-style: solid;
+}
+
+#home,
+#locations {
+  margin-top: 211px;
+}
+
+.nav-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: $base-background;
+
+  background-image: url("../src/images/gl-hp-pic.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.nav-shrink {
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.nav-shrink ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  background: #2e2e2ee0;
+}
+
+.nav-shrink ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  height: 50px;
+  border-radius: 30px;
+  margin: 10px 14px;
+}
+
+.nav-shrink a {
+  text-decoration: none;
+  color: white;
+  font-family: "Roboto Reg";
+  cursor: pointer;
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    transition: height 0.5s;
+  }
+}
+
+#home {
+  background-color: $base-background;
+  flex: 1;
+  height: auto;
+}
+
+#locations {
+    flex: 1;
+    padding: 5px;
+    background-color: #e9e9e9;
+}
+
+.location-card {
+  @extend .Nunito;
+  padding: 10px 5px;
+
+  h3 {
+    color: white;
+    font-weight: normal;
+    font-size: large;
+    margin: 0;
+  }
+
+  h4 {
+    color: $color-yellow;
+    font-weight: normal;
+    margin: 0;
+    margin-top: 1.67em;
+  }
+
+  h5 {
+    color: whitesmoke;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  button {
+      color: white;
+      margin: 0 auto;
+      display: block;
+      border-color: white;
+      margin-top: 30px;
+  }
+}
+
+
+.choose-location {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    background-color: $card-back-alt;
+    box-shadow: 0px -6px 45px 20px rgb(28 28 28 / 86%);
+    border-top: 2px solid white;
+    width: 85vw;
+    left: calc((100vw - 85vw - 20px) / 2);
+
+   @extend .Nunito;
+   
+    span {
+        color: rgb(67, 67, 67);
+    }
+
+    h4, h5 {
+        margin: 0;
+    }
+
+    .choose-more-close {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+#special-bar {
+  display: flex;
+  position: relative;
+}
+
+#special-img {
+  image-rendering: pixelated;
+  width: 100%;
+}
+
+.four-tile {
+  @extend .section-break;
+}
+
+.tile-cards {
+  font-variant: small-caps;
+  height: calc(100vw / 2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $card-back-alt;
+
+  .img-card {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+  }
+
+  div {
+    max-width: calc(100% - 30px);
+  }
+
+  h4 {
+    color: $color-yellow;
+    font-weight: normal;
+    font-family: "Roboto Lt";
+    margin: 0;
+  }
+
+  h3 {
+    font-family: "Roboto Lt";
+    font-weight: normal;
+    color: white;
+    margin: 0;
+  }
+
+  &:nth-child(3) {
+    background-color: $card-back;
+  }
+
+  &:nth-child(2) {
+    background-color: $card-back;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.info-stripe {
+  padding: 10px 40px;
+  font-variant: small-caps;
+  @extend .section-break;
+
+  span {
+    display: flex;
+    justify-content: center;
+  }
+
+  h4 {
+    color: $color-yellow;
+    font-weight: normal;
+    font-family: "Roboto Lt";
+    margin: 0;
+    padding-right: 10px;
+  }
+
+  h4:nth-child(2) {
+    color: white;
+  }
+
+  h3 {
+    font-family: "Roboto Lt";
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.social-media-wrap {
+  position: absolute;
+  display: grid;
+  right: 5px;
+  bottom: 5px;
+
+  img {
+    width: 35px;
+    margin: 10px;
+    box-shadow: 0 0 0px 6px rgb(70 70 70 / 66%);
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+  }
+}
+
+#foot-bar {
+  background-color: #4c403b;
+  color: white;
+
+  :nth-child(1) {
+    font-family: "Roboto Lt";
+    font-variant: small-caps;
+    font-size: small;
+  }
+}
+
+#snack-logo {
+  width: 80px;
+  z-index: 900;
+}

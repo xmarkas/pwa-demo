@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+// import '../src/fonts/RobotoCondensed-Regular.ttf';
+
 
 ReactDOM.render(
   <React.StrictMode>
