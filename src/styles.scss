@@ -97,7 +97,7 @@ body {
   h3 {
     color: white;
     font-weight: normal;
-    font-size: large;
+    font-size: 17px;
     margin: 0;
   }
 
@@ -112,6 +112,7 @@ body {
     color: whitesmoke;
     font-weight: normal;
     margin: 0;
+    font-size: 12px;
   }
 
   button {
@@ -273,4 +274,18 @@ body {
 #snack-logo {
   width: 80px;
   z-index: 900;
+}
+
+.desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    div {
+        display: grid;
+        text-align: center;
+        color: white;
+    }
 }

@@ -11,10 +11,13 @@ const FindLocation = lazy(() => import('./pages/FindLocation'));
 const NavBar = lazy(() => import('./components/NavBar'));
 const FootBar = lazy(() => import('./components/FootBar'));
 const Snacks = lazy(() => import('./components/Snacks'));
+const Desktop = lazy(() => import('./pages/Desktop'));
 
 
 function App() {
   const [snackMessage, setSnackMessage] = useState("");
+
+  const mobileOnly = window.outerWidth < 500;
 
   const fireSnack = sMessage => {
     const TEMPSNACK = "App links coming soon!";
@@ -29,13 +32,13 @@ function App() {
   return (
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
-        <NavBar />
+        {mobileOnly && <NavBar />}
         <Routes>
           <Route exact path="/locations" element={<FindLocation />} />
           <Route exact path="/menu" element={<About />} />
-          <Route exact path="/" element={<Home fireSnack={fireSnack} />} />
+          <Route exact path="/" element={mobileOnly ? <Home fireSnack={fireSnack} />: <Desktop/>} />
         </Routes>
-        <FootBar fireSnack={fireSnack} />
+        {mobileOnly && <FootBar fireSnack={fireSnack} />}
         <Snacks fire={snackMessage} endSnack={endSnack} />
       </Suspense>
     </Router>
