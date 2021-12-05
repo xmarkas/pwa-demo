@@ -1,2 +1,0 @@
-(this["webpackJsonppwa-demo"]=this["webpackJsonppwa-demo"]||[]).push([[4],{18:function(e,t,o){"use strict";o.r(t);o(0);var c=o(2);t.default=function(){return Object(c.jsx)("h1",{children:"Welcome to your PWA"})}}}]);
-//# sourceMappingURL=4.afb86296.chunk.js.map
