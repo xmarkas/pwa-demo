@@ -11,7 +11,6 @@ const NavBar = (props) => {
 
   const handleScroll = () => {
     const position = window.pageYOffset;
-    console.log(position);
 
     if (position > 100) {
       setShrinkValue(50);
